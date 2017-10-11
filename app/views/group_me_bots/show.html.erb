@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Token:</strong>
+  <%= @group_me_bot.token %>
+</p>
+
+<p>
+  <strong>Bot:</strong>
+  <%= @group_me_bot.bot_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @group_me_bot.name %>
+</p>
+
+<%= link_to 'Edit', edit_group_me_bot_path(@group_me_bot) %> |
+<%= link_to 'Back', group_me_bots_path %>
+
+<p>
+<%= button_to 'Test GroupMe bot', test_group_me_bot_path(@group_me_bot) %>
+</p>

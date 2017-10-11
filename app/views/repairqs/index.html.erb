@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Repairqs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Server</th>
+      <th>Location</th>
+      <th>Default login</th>
+      <th>Default pin</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @repairqs.each do |repairq| %>
+      <tr>
+        <td><%= repairq.name %></td>
+        <td><%= repairq.server %></td>
+        <td><%= repairq.location %></td>
+        <td><%= repairq.default_login %></td>
+        <td><%= repairq.default_pin %></td>
+        <td><%= link_to 'Show', repairq %></td>
+        <td><%= link_to 'Edit', edit_repairq_path(repairq) %></td>
+        <td><%= link_to 'Destroy', repairq, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Repairq', new_repairq_path %>

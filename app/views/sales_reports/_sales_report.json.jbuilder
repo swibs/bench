@@ -1,0 +1,2 @@
+json.extract! sales_report, :id, :date, :net_sales, :open_ticket_sales, :closed_ticket_sales, :deposit, :tickets_created, :created_at, :updated_at
+json.url sales_report_url(sales_report, format: :json)

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Group Me Bots</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Bot</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @group_me_bots.each do |group_me_bot| %>
+      <tr>
+        <td><%= group_me_bot.token %></td>
+        <td><%= group_me_bot.bot_id %></td>
+        <td><%= group_me_bot.name %></td>
+        <td><%= link_to 'Show', group_me_bot %></td>
+        <td><%= link_to 'Edit', edit_group_me_bot_path(group_me_bot) %></td>
+        <td><%= link_to 'Destroy', group_me_bot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Group Me Bot', new_group_me_bot_path %>

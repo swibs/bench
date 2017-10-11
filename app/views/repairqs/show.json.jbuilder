@@ -1,0 +1,1 @@
+json.partial! "repairqs/repairq", repairq: @repairq

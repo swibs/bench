@@ -1,0 +1,1 @@
+json.partial! "group_me_bots/group_me_bot", group_me_bot: @group_me_bot

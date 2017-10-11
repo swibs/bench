@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bench</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<div id="left-nav" style="float:left;    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: gray;
+">
+		<hr style="display:block;width:1px;height:inherit;float: right;color: pink;margin: 2em auto;border-style: solid;"/>
+  		<ul>
+  			<li>
+  				<h4>Bench</h4>
+  			</li>
+  			<li class="nav-selected" style="background-color:none;">
+  				Check in
+  			</li>
+  			<li>
+  				Repairs
+  			</li>
+  			<li>
+  				Check out
+  			</li>
+  			<li>
+  				Results
+  			</li>
+  			<li>
+  				Estimates
+  			</li>
+  			<li>
+  				Parts
+  			</li>
+        <li>
+          <%= link_to "RepairQ", repairqs_path %>
+        </li>
+        <li>
+          <%= link_to "Sales", sales_reports_path %>
+        </li>
+  		</ul>
+
+
+
+  	</div>
+    <div id="main-content" style="position:relative; left:12em;"><%= yield %></div>
+  </body>
+</html>

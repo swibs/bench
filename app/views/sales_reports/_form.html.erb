@@ -1,0 +1,49 @@
+<%= form_for(sales_report) do |f| %>
+  <% if sales_report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sales_report.errors.count, "error") %> prohibited this sales_report from being saved:</h2>
+
+      <ul>
+      <% sales_report.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+  </div>
+
+  <!--
+  <div class="field">
+    <%= f.label :net_sales %>
+    <%= f.number_field :net_sales %>
+  </div>
+
+  <div class="field">
+    <%= f.label :open_ticket_sales %>
+    <%= f.number_field :open_ticket_sales %>
+  </div>
+
+  <div class="field">
+    <%= f.label :closed_ticket_sales %>
+    <%= f.number_field :closed_ticket_sales %>
+  </div>
+
+  <div class="field">
+    <%= f.label :deposit %>
+    <%= f.number_field :deposit %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tickets_created %>
+    <%= f.number_field :tickets_created %>
+  </div>
+  -->
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,1 @@
+json.array! @group_me_bots, partial: 'group_me_bots/group_me_bot', as: :group_me_bot

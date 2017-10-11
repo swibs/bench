@@ -1,0 +1,42 @@
+<%= form_for(repairq) do |f| %>
+  <% if repairq.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(repairq.errors.count, "error") %> prohibited this repairq from being saved:</h2>
+
+      <ul>
+      <% repairq.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :server %>
+    <%= f.text_field :server %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :default_login %>
+    <%= f.text_field :default_login %>
+  </div>
+
+  <div class="field">
+    <%= f.label :default_pin %>
+    <%= f.text_field :default_pin %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

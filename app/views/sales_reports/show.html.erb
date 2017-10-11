@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @sales_report.date %>
+</p>
+
+<p>
+  <strong>Net sales:</strong>
+  <%= cents_to_currency @sales_report.net_sales %>
+</p>
+
+<p>
+  <strong>Open ticket sales:</strong>
+  <%= cents_to_currency @sales_report.open_ticket_sales %>
+</p>
+
+<p>
+  <strong>Closed ticket sales:</strong>
+  <%= cents_to_currency @sales_report.closed_ticket_sales %>
+</p>
+
+<p>
+  <strong>Deposit:</strong>
+  <%= cents_to_currency @sales_report.deposit %>
+</p>
+
+<p>
+  <strong>Tickets created:</strong>
+  <%= @sales_report.tickets_created %>
+</p>
+
+<%= link_to 'Edit', edit_sales_report_path(@sales_report) %> |
+<%= link_to 'Back', sales_reports_path %>
+
+<p>
+  <%= button_to "Post to GroupMe", post_to_group_me_sales_report_path(@sales_report) %>
+</p>
+

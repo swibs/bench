@@ -1,0 +1,1 @@
+json.array! @repairqs, partial: 'repairqs/repairq', as: :repairq

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @repairq.name %>
+</p>
+
+<p>
+  <strong>Server:</strong>
+  <%= @repairq.server %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @repairq.location %>
+</p>
+
+<p>
+  <strong>Default login:</strong>
+  <%= @repairq.default_login %>
+</p>
+
+<p>
+  <strong>Default pin:</strong>
+  <%= @repairq.default_pin %>
+</p>
+
+<p>
+<%= link_to 'Edit', edit_repairq_path(@repairq) %> |
+<%= link_to 'Back', repairqs_path %> |
+<%= link_to 'Test', test_login_repairq_path(@repairq) %>
+</p>
+
+<p><strong>Reports</strong>
+<%= link_to "Sales", sales_reports_path(@repairq) %> <br />
+<%= link_to "Repairs", repairs_report_repairq_path(@repairq) %>
+</p>

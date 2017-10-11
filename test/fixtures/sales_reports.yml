@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2017-04-10 03:00:23
+  net_sales: 1
+  open_ticket_sales: 1
+  closed_ticket_sales: 1
+  deposit: 1
+  tickets_created: 1
+
+two:
+  date: 2017-04-10 03:00:23
+  net_sales: 1
+  open_ticket_sales: 1
+  closed_ticket_sales: 1
+  deposit: 1
+  tickets_created: 1
